@@ -1,0 +1,17 @@
+<div class="sheduleContainer">
+  <div class="schedule">
+    <div style="{{#getTimeBlockNow}} {{/getTimeBlockNow}}" id="timeBlockNow" class="blockNow"></div>
+    {{#each timeSchedule }}
+      {{#if this}}
+      <div style="{{#getTimeBlockPosition this}} {{/getTimeBlockPosition}}" class="block">
+        {{#each this.columns }}
+        {{#if this}}
+          <span class="tag {{#getTagType this}} {{/getTagType}} is-myTag is-small">{{this}}</span>
+        {{/if}}
+        {{/each}}
+      </div>
+      {{/if}}
+
+    {{/each}}
+  </div>
+</div>

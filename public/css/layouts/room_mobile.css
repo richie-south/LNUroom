@@ -1,0 +1,24 @@
+
+.section {
+  padding: 4px 12px;
+  padding-bottom: 12px;
+}
+
+.notification {
+  padding: 26px 12px;
+}
+
+.block {
+  padding: 6px;
+  left: 12%;
+  width: 88%;
+}
+
+.blockNow {
+  width: 90%;
+  left: 10%;
+}
+
+.scheduleWrap {
+  height: 88vh;
+}

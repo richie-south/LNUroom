@@ -1,0 +1,136 @@
+
+/***/
+
+.scheduleWrap{
+    position: relative;
+    height: 83vh;
+    width: 100%;
+}
+
+.timeTable{
+}
+
+.notification{
+  overflow: hidden;
+  padding: 40px 20px;
+  padding-bottom: 0px;
+  background-color: #FFFFFF;
+}
+
+.container{
+  margin: auto;
+  max-width: 1000px;
+}
+
+.section {
+  background-color: initial;
+  padding: 6px 20px;
+}
+
+.timeTable div{
+	position: absolute;
+}
+
+.sheduleContainer{
+	float:right;
+	height:100%;
+	width: 94%;
+}
+
+.schedule div{
+	position:absolute;
+}
+
+.block{
+  overflow: scroll;
+  padding: 8px;
+  border-radius: 4px;
+	width: 90%;
+	background-color: #f5f5f5;
+  left: 8%;
+}
+
+.blockNow {
+  border-radius: 4px;
+  z-index: 1;
+  width: 92%;
+	background-color: #20EE68;
+  opacity: 0.4;
+}
+
+.timeObject{
+  font-size: 12px;
+  width: 6%;
+  text-align: right;
+}
+
+.is-myTag{
+  margin-bottom: 8px;
+}
+
+.is-myColor{
+  background-color: #e8e8e8;
+  color: #4a4a4a;
+}
+
+.nav{
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.title{
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.search{
+
+}
+
+.searchInput{
+  max-width: 400px;
+  width: 400px !important;
+  min-width: 200px
+}
+
+#time_8{
+    top: -2%;
+}
+
+#time_9{
+	top: 7%;
+}
+
+#time_10{
+	top: 16%;
+}
+
+#time_11{
+	top: 25%;
+}
+
+#time_12{
+	top: 34%;
+}
+
+#time_13{
+	top: 43%;
+}
+
+#time_14{
+	top: 52%;
+}
+
+#time_15{
+	top: 61%;
+}
+
+#time_16{
+	top: 70%;
+}
+
+#time_17{
+	top: 79%;
+}
+
+#time_18{
+	top: 88%;
+}
