@@ -44,6 +44,7 @@ const getTodaysSchedule = (url, type, id) => {
     return {
       timeSchedule,
       roomName: id,
+      bookingActive: timeSchedule ? (getActiveBooking(timeSchedule) ? true : false) : false
     };
   })();
 };
