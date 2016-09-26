@@ -13,7 +13,7 @@ router.get('/room/:roomName', function(req, res){
     .catch(e => {
       if(e instanceof TypeError){
         return res.status(500).render('500', {
-          message: 'Nothing here to see'
+          message: 'Server error'
         });
       }
       return res.status(404).render('404', {
