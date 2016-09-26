@@ -7,11 +7,16 @@ const timeEditConfig = require('../../config/timeEdit');
 router.get('/room/:roomName', function(req, res){
   Promise.resolve(timeEdit.getTodaysSchedule(timeEditConfig.timeeditURL, timeEditConfig.timeeditType, req.params.roomName))
     .then(result => {
-      const { timeSchedule, roomName } = result;
-      res.json({ timeSchedule, roomName, message: 'Success'});
+      const { timeSchedule, roomName, bookingActive } = result;
+      res.json({ timeSchedule, roomName, bookingActive, message: 'Success'});
     })
     .catch(e => {
-      res.status(404).json({
+      if(e instanceof TypeError){
+        return res.status(500).json({
+          message: 'Server error'
+        });
+      }
+      return res.status(404).json({
         message: 'Nothing here to see'
        });
     });

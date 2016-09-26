@@ -11,9 +11,15 @@ router.get('/room/:roomName', function(req, res){
       res.status(200).render('room', { timeSchedule, searchParam: roomName, message: 'Success'});
     })
     .catch(e => {
-      res.status(404).render('404', {
+      if(e instanceof TypeError){
+        return res.status(500).render('500', {
+          message: 'Server error'
+        });
+      }
+      return res.status(404).render('404', {
         searchParam: req.params.roomName,
-        message: 'Nothing here to see'});
+        message: 'Nothing here to see'
+      });
     });
 });
 

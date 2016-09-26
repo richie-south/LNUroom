@@ -22,3 +22,13 @@
 .scheduleWrap {
   height: 88vh;
 }
+
+.searchInput{
+  /*max-width: 150px;*/
+  width: 150px !important;
+}
+
+
+.nav-center {
+  margin-left: initial;
+}
