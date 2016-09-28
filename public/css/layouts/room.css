@@ -12,7 +12,7 @@
 
 .notification{
   overflow: hidden;
-  padding: 40px 20px;
+  padding: 20px 20px;
   padding-bottom: 0px;
   background-color: #FFFFFF;
 }
@@ -84,6 +84,11 @@
 
 .search{
 
+}
+
+.pagination{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .searchInput{
