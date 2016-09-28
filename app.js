@@ -41,6 +41,7 @@ app.use(function(req, res, next){
 
 // site
 app.use('/', require('./routes/site/index'));
+app.use('/', require('./routes/site/room'));
 
 // api
 app.use('/api/room', require('./routes/api/room'));
