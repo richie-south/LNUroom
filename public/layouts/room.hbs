@@ -9,10 +9,14 @@
 </head>
 <body>
   {{> menu}}
+  <div class="is-hidden-tablet">{{> pagination}}</div>
   <div>
     <section class="section">
       <div class="container">
         <div class="notification">
+          <div class="content">
+            <div class="tag is-dark is-small" style="{{#scheduleColor timeSchedule}} {{/scheduleColor}}">{{#formatDate date}}{{/formatDate}}</div>
+          </div>
           <div class="scheduleWrap">
             {{> timeTable}}
 
