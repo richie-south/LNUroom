@@ -12,18 +12,18 @@ const isNullOrFalse = (value) => {
   return false;
 };
 
-const getSchedule = (cache, timeEditScheduleFn, key, id) =>
+const getSchedule = (cache, timeEditScheduleFn, key, id, date = new Date()) =>
   new Promise(function(resolve, reject) {
-    cache.get(id + key)
+    cache.get(`${id}${key}_${date.getDate()}`)
       .then(schedule => {
         if(isNullOrFalse(schedule)){
-          return timeEditScheduleFn(id);
+          return timeEditScheduleFn(id, date);
         }
         resolve(schedule);
         return schedule;
       })
       .then(schedule => {
-        cache.set(id + key, schedule, 10800 * 1000);
+        cache.set(`${id}${key}_${date.getDate()}`, schedule, 10800 * 1000);
         resolve(schedule);
       })
       .catch(reject);
@@ -34,7 +34,7 @@ const TimeeditDAL = (url, type) => {
   const cache = new FileCacheSimple();
 
   return {
-    getTodaysSchedule: getSchedule.bind(null, cache, timeEdit.getTodaysSchedule, TODAY_SAVE_KEY),
+    getScheduleByDate: getSchedule.bind(null, cache, timeEdit.getScheduleByDate, TODAY_SAVE_KEY),
     getSchedule: getSchedule.bind(null, cache, timeEdit.getSchedule, FULL_SAVE_KEY)
   };
 };

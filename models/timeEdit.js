@@ -35,11 +35,11 @@ const getActiveBooking = (timeSchedule) => {
 };
 
 
-const getTodaysSchedule = (url, type, id) => {
+const getScheduleByDate = (url, type, id, date = new Date()) => {
   const timeEditLNU = timeEditDAL(url, type);
 
   return co.wrap(function*(){
-    const timeSchedule = yield timeEditLNU.getTodaysSchedule(id);
+    const timeSchedule = yield timeEditLNU.getScheduleByDate(id, date);
 
     return {
       timeSchedule,
@@ -52,6 +52,6 @@ const getTodaysSchedule = (url, type, id) => {
 };
 
 module.exports = {
-  getTodaysSchedule,
+  getScheduleByDate,
   getActiveBooking
 };
