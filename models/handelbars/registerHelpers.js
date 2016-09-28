@@ -55,3 +55,11 @@ Handlebars.registerHelper('scheduleColor', function(timeSchedule, options) {
     background: -webkit-linear-gradient(to left, #7474BF , #348AC7);
     background: linear-gradient(to left, #7474BF , #348AC7);`;
 });
+
+
+Handlebars.registerHelper('formatDate', function(date, options) {
+  const d = new Date(date);
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  return `${days[d.getDay()]} ${d.getDate()}`;
+});
