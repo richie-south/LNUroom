@@ -59,7 +59,6 @@ Handlebars.registerHelper('scheduleColor', function(timeSchedule, options) {
 
 Handlebars.registerHelper('formatDate', function(date, options) {
   const d = new Date(date);
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
+  const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   return `${days[d.getDay()]} ${d.getDate()}`;
 });
