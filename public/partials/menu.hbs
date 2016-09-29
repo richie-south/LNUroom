@@ -1,16 +1,20 @@
 <nav class="nav">
   <div class="container">
     <div class="nav-left is-hidden-mobile">
-      <h1 class="title nav-item is-tab"><strong>LNUroom</strong></h1>
+      <div class="nav-item is-tab">
+        <div class="title "><strong>LNUroom</strong></div>
+      </div>
     </div>
     <div class="nav-center">
       <div id="searchHolder" class="nav-item is-tab control is-expanded has-addons search">
         {{> search}}
       </div>
     </div>
-    <div class="nav-right">
+    <div class="nav-right is-hidden-mobile">
       <div class="nav-item is-tab">
-        <!--<a class="button is-outlined is-primary">OPTIONS</a>-->
+        {{#if success}}
+          {{> pagination}}
+        {{/if}}
     </div>
   </div>
 </nav>

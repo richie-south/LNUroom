@@ -5,7 +5,7 @@
 }
 
 .notification {
-  padding: 26px 12px;
+  padding: 12px 12px;
 }
 
 .block {
@@ -31,4 +31,10 @@
 
 .nav-center {
   margin-left: initial;
+}
+
+
+.pagination{
+  margin-left: 12px;
+  margin-right: 12px;
 }

@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   {{> headLinks}}
 
-  <title>LNUroom: {{ searchParam }}</title>
+  <title>LNUroom: {{ searchParam }} {{#formatDate date}}{{/formatDate}}</title>
 </head>
 <body>
   {{> menu}}
+  <div class="is-hidden-tablet">{{> pagination}}</div>
   <div>
     <section class="section">
       <div class="container">
         <div class="notification">
+          <div class="content">
+            <div class="tag is-dark is-small" style="{{#scheduleColor timeSchedule}} {{/scheduleColor}}">{{#formatDate date}}{{/formatDate}}</div>
+          </div>
           <div class="scheduleWrap">
             {{> timeTable}}
 
