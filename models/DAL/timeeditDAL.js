@@ -23,8 +23,8 @@ const getSchedule = (cache, timeEditScheduleFn, key, id, date = new Date()) =>
         return schedule;
       })
       .then(schedule => {
-        cache.set(`${id}${key}_${date.getDate()}`, schedule, 10800 * 1000);
         resolve(schedule);
+        cache.set(`${id}${key}_${date.getDate()}`, schedule, 10800 * 1000);
       })
       .catch(reject);
   });
